@@ -3,6 +3,7 @@ const mongoose = require('mongoose')//use to work with mongodb
 const morgan = require('morgan')// important for deploy
 const bodyParser = require('body-parser')//pass the request and submit response and request
 
+mongoose.set("strictQuery", false);
 mongoose.connect('mongodb://localhost:27017/fuelapp',{useNewUrlParser:true,useUnifiedTopology:true})
 const db = mongoose.connection
 
