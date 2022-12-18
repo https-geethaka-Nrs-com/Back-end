@@ -3,6 +3,8 @@ const mongoose = require('mongoose')//use to work with mongodb
 const morgan = require('morgan')// important for deploy
 const bodyParser = require('body-parser')//pass the request and submit response and request
 
+const DealerRoute = require('./routes/dealer')
+
 const AuthRoute = require('./routes/auth')
 
 mongoose.set("strictQuery", false);
@@ -30,3 +32,5 @@ app.listen(PORT,()=>{
 })
 
 app.use('/api',AuthRoute)
+
+app.use('/api/dealer',DealerRoute)
