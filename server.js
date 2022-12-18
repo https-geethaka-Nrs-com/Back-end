@@ -3,6 +3,8 @@ const mongoose = require('mongoose')//use to work with mongodb
 const morgan = require('morgan')// important for deploy
 const bodyParser = require('body-parser')//pass the request and submit response and request
 
+const AuthRoute = require('./routes/auth')
+
 mongoose.set("strictQuery", false);
 mongoose.connect('mongodb://localhost:27017/fuelapp',{useNewUrlParser:true,useUnifiedTopology:true})
 const db = mongoose.connection
@@ -26,3 +28,5 @@ const PORT = process.env.PORT || 3000
 app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT}`)
 })
+
+app.use('/api',AuthRoute)
