@@ -6,6 +6,8 @@ const bodyParser = require('body-parser')//pass the request and submit response 
 const DealerRoute = require('./routes/dealer')
 
 const AuthRoute = require('./routes/auth')
+const dotenv = require("dotenv");  //require dotenv package
+dotenv.config({ path: "./.env" }); //import config.env file
 
 mongoose.set("strictQuery", false);
 mongoose.connect(process.env.DATABASE,{useNewUrlParser:true,useUnifiedTopology:true})
