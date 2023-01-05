@@ -4,7 +4,9 @@ const morgan = require('morgan')// important for deploy
 const bodyParser = require('body-parser')//pass the request and submit response and request
 
 const DealerRoute = require('./routes/dealer')
-const FuelStatusRoute = require("./routes/fuelStatus");
+const FuelStatusRoute = require("./routes/fuelStatus")
+const FuelQueueRoute = require("./routes/fuelQueue")
+
 
 const AuthRoute = require('./routes/auth')
 const dotenv = require("dotenv");  //require dotenv package
@@ -38,3 +40,4 @@ app.use('/api',AuthRoute)
 
 app.use('/api/dealer',DealerRoute)
 app.use('/api/fuelStatus',FuelStatusRoute)
+app.use('/api/fuelQueue',FuelQueueRoute)

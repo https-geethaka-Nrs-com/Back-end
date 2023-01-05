@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
-const fuelStatusSchema = new Schema({
-    fuelTypeName: {
+const fuelQueueSchema = new Schema({
+    userName: {
         type: String,
         trim: true,
         required: true,
@@ -10,18 +10,17 @@ const fuelStatusSchema = new Schema({
       arrivalTime: {
         type: Date,
         trim: true,
-        required: true,
       },
-      finishedTime: {
+      departTime: {
         type: Date,
         trim: true,
-        required: true,
       },
       status: {
         type: String,
-        default: false,
+        trim: true,
+        required: true,
       },
 },{timestamps:true})
 
-const FuelStatus = mongoose.model('FuelStatus',fuelStatusSchema)
-module.exports = FuelStatus
+const FuelQueue = mongoose.model('FuelQueue',fuelQueueSchema)
+module.exports = FuelQueue
