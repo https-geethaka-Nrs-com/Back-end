@@ -1,4 +1,4 @@
-const FuelQueue = require("../Models/FuelQueue")
+const FuelQueue = require("../models/FuelQueue")
 const { response } = require('express')
 
 /*Create a new fuel queue when a user arrives at the fuel station*/
