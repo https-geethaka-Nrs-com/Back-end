@@ -1,4 +1,4 @@
-const FuelStatus = require("../models/fuelStatus")
+const FuelStatus = require("../models/FuelStatus")
 const { response } = require('express')
 
 /*Create a new fuel status*/
