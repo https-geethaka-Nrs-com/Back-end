@@ -38,6 +38,6 @@ app.listen(PORT,()=>{
 
 app.use('/api',AuthRoute)
 
-app.use('/api/dealer',DealerRoute)
+app.use('/show',DealerRoute)
 app.use('/api/fuelStatus',FuelStatusRoute)
 app.use('/api/fuelQueue',FuelQueueRoute)
