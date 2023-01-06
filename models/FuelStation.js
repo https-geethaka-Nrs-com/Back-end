@@ -6,7 +6,7 @@ const fuelStationSchema = new Schema({
         type: String,
         trim: true,
       },
-      owner: {
+      dealer: {
         type: String,
         trim: true,
       },
