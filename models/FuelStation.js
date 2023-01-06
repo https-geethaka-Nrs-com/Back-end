@@ -40,5 +40,5 @@ const fuelStationSchema = new Schema({
       },
 },{timestamps:true})
 
-const FuelStation = mongoose.model('FuelStatus',fuelStationSchema)
+const FuelStation = mongoose.model('FuelStation',fuelStationSchema)
 module.exports = FuelStation
