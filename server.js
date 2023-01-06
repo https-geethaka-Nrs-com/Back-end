@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')//pass the request and submit response 
 const DealerRoute = require('./routes/dealer')
 const FuelStatusRoute = require("./routes/fuelStatus")
 const FuelQueueRoute = require("./routes/fuelQueue")
+const FuelStationRoute = require("./routes/fuelStation")
 
 
 const AuthRoute = require('./routes/auth')
@@ -41,3 +42,4 @@ app.use('/api',AuthRoute)
 app.use('/show',DealerRoute)
 app.use('/api/fuelStatus',FuelStatusRoute)
 app.use('/api/fuelQueue',FuelQueueRoute)
+app.use('/api/fuelStation',FuelStationRoute)
