@@ -58,8 +58,8 @@ function convertToJsDate(javaDate) {
 
 const getFuelStation = async (req, res) => {
     try {
-        const id = req.params.id
-        const fuelStation = await FuelStation.findById(id)
+        const name = req.params.name
+        const fuelStation = await FuelStation.find({ name: name })
         res.status(200).json(fuelStation)
     } catch (error) {
         res.status(404).json({ message: error.message })
